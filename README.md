@@ -26,13 +26,7 @@
 - `git pull origin <branch_name>` - ดึงโค้ดล่าสุดจาก remote และ merge เข้ากับ local (บังคับใช้หากต้องการอัปเดตโค้ด)
 - `git fetch` - ดึงข้อมูลการอัปเดตจาก remote แต่ไม่ merge (ไม่บังคับ แต่ใช้เพื่อตรวจสอบว่ามีการเปลี่ยนแปลงหรือไม่)
 
-#### 5. การเปลี่น branch ทับ main
-- `git checkout main` - ดึงโค้ดล่าสุดจาก remote และ merge เข้ากับ local (บังคับใช้หากต้องการอัปเดตโค้ด)
-- `git switch main` - ดึงโค้ดล่าสุดจาก remote และ merge เข้ากับ local (บังคับใช้หากต้องการอัปเดตโค้ด)
-- `git merge your-branch` - คัดลอกโค้ดจา github มาแทนที่โค้ดบน local. Merge branch ย่อยเข้า main
-- `git push origin main` - Push การเปลี่ยนแปลงไปยัง remote
-
-#### 6. การ commit และ push
+#### 5. การ commit และ push
 - `git add .` - เพิ่มไฟล์ทั้งหมดที่เปลี่ยนแปลงเข้าสู่ staging area (บังคับใช้ก่อน commit)
 - `git add -u` - เฉพาะไฟล์ที่ถูกแก้ไขหรือลบ แต่ไม่รวมไฟล์ที่เพิ่มใหม่ (บังคับใช้ก่อน commit)
 - `git add -A` - รวมทุกอย่าง เทียบเท่ากับ `git add .` แต่ครอบคลุมทุกกรณีใน repo (บังคับใช้ก่อน commit)
@@ -42,6 +36,12 @@
 - `git commit -am "message"` - เพิ่มไฟล์ที่ถูกแก้ไขและ commit ในคำสั่งเดียว (ไม่บังคับ แต่สะดวกสำหรับการ commit ไฟล์ที่ถูก track แล้ว)
 - `git push origin <branch_name>` - ส่ง commit ขึ้นไปยัง remote repository (บังคับใช้หากต้องการอัปโหลดโค้ด)
 - `git push --force` - บังคับ push เมื่อมีการเปลี่ยนแปลง branch history (ไม่บังคับ ควรใช้อย่างระมัดระวัง)
+
+#### 6. การเปลี่น branch ทับ main
+- `git checkout main` - ดึงโค้ดล่าสุดจาก remote และ merge เข้ากับ local (บังคับใช้หากต้องการอัปเดตโค้ด)
+- `git switch main` - ดึงโค้ดล่าสุดจาก remote และ merge เข้ากับ local (บังคับใช้หากต้องการอัปเดตโค้ด)
+- `git merge your-branch` - คัดลอกโค้ดจา github มาแทนที่โค้ดบน local. Merge branch ย่อยเข้า main
+- `git push origin main` - Push การเปลี่ยนแปลงไปยัง remote
 
 #### 7. การตรวจสอบสถานะ
 - `git status` - แสดงสถานะของไฟล์ที่เปลี่ยนแปลง (ไม่บังคับ แต่มีประโยชน์สำหรับการตรวจสอบ)
