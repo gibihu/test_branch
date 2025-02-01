@@ -34,6 +34,10 @@
 
 #### 6. การ commit และ push
 - `git add .` - เพิ่มไฟล์ทั้งหมดที่เปลี่ยนแปลงเข้าสู่ staging area (บังคับใช้ก่อน commit)
+- `git add -u` - เฉพาะไฟล์ที่ถูกแก้ไขหรือลบ แต่ไม่รวมไฟล์ที่เพิ่มใหม่ (บังคับใช้ก่อน commit)
+- `git add -A` - รวมทุกอย่าง เทียบเท่ากับ `git add .` แต่ครอบคลุมทุกกรณีใน repo (บังคับใช้ก่อน commit)
+- `git add $(git diff --name-only)` - เฉพาะไฟล์ที่แก้ไขเท่านั้น (บังคับใช้ก่อน commit)
+- `git add filename1 filename2` - เฉพาะไฟล์ที่ต้องการ (บังคับใช้ก่อน commit)
 - `git commit -m "message"` - บันทึกการเปลี่ยนแปลง (บังคับใช้ก่อน push ขึ้น remote)
 - `git commit -am "message"` - เพิ่มไฟล์ที่ถูกแก้ไขและ commit ในคำสั่งเดียว (ไม่บังคับ แต่สะดวกสำหรับการ commit ไฟล์ที่ถูก track แล้ว)
 - `git push origin <branch_name>` - ส่ง commit ขึ้นไปยัง remote repository (บังคับใช้หากต้องการอัปโหลดโค้ด)
